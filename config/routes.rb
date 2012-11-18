@@ -1,4 +1,6 @@
 Convenios::Application.routes.draw do
+  resources :experiencia
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
