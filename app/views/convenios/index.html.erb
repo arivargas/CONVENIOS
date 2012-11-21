@@ -1,0 +1,45 @@
+<h1>Listing convenios</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Pais</th>
+    <th>Institucion</th>
+    <th>Vigencia</th>
+    <th>Carreras</th>
+    <th>Duracion</th>
+    <th>Modalidad</th>
+    <th>Idioma</th>
+    <th>Beneficios</th>
+    <th>Requisitos</th>
+    <th>Datos adjuntos</th>
+    <th>Tipoconvenio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @convenios.each do |convenio| %>
+  <tr>
+    <td><%= convenio.titulo %></td>
+    <td><%= convenio.pais %></td>
+    <td><%= convenio.institucion %></td>
+    <td><%= convenio.vigencia %></td>
+    <td><%= convenio.carreras %></td>
+    <td><%= convenio.duracion %></td>
+    <td><%= convenio.modalidad %></td>
+    <td><%= convenio.idioma %></td>
+    <td><%= convenio.beneficios %></td>
+    <td><%= convenio.requisitos %></td>
+    <td><%= convenio.datos_adjuntos %></td>
+    <td><%= convenio.TipoConvenio %></td>
+    <td><%= link_to 'Show', convenio %></td>
+    <td><%= link_to 'Edit', edit_convenio_path(convenio) %></td>
+    <td><%= link_to 'Destroy', convenio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Convenio', new_convenio_path %>

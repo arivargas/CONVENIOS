@@ -1,0 +1,65 @@
+<%= form_for(@convenio) do |f| %>
+  <% if @convenio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@convenio.errors.count, "error") %> prohibited this convenio from being saved:</h2>
+
+      <ul>
+      <% @convenio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :pais %><br />
+    <%= f.text_field :pais %>
+  </div>
+  <div class="field">
+    <%= f.label :institucion %><br />
+    <%= f.text_field :institucion %>
+  </div>
+  <div class="field">
+    <%= f.label :vigencia %><br />
+    <%= f.text_field :vigencia %>
+  </div>
+  <div class="field">
+    <%= f.label :carreras %><br />
+    <%= f.text_field :carreras %>
+  </div>
+  <div class="field">
+    <%= f.label :duracion %><br />
+    <%= f.text_field :duracion %>
+  </div>
+  <div class="field">
+    <%= f.label :modalidad %><br />
+    <%= f.text_field :modalidad %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma %><br />
+    <%= f.text_field :idioma %>
+  </div>
+  <div class="field">
+    <%= f.label :beneficios %><br />
+    <%= f.text_field :beneficios %>
+  </div>
+  <div class="field">
+    <%= f.label :requisitos %><br />
+    <%= f.text_field :requisitos %>
+  </div>
+  <div class="field">
+    <%= f.label :datos_adjuntos %><br />
+    <%= f.text_field :datos_adjuntos %>
+  </div>
+  <div class="field">
+    <%= f.label :TipoConvenio %><br />
+    <%= f.text_field :TipoConvenio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

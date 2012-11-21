@@ -1,0 +1,25 @@
+<%= form_for(@sitio) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> prohibited this sitio from being saved:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :enlace %><br />
+    <%= f.text_field :enlace %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

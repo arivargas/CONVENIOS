@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @convenio.titulo %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @convenio.pais %>
+</p>
+
+<p>
+  <b>Institucion:</b>
+  <%= @convenio.institucion %>
+</p>
+
+<p>
+  <b>Vigencia:</b>
+  <%= @convenio.vigencia %>
+</p>
+
+<p>
+  <b>Carreras:</b>
+  <%= @convenio.carreras %>
+</p>
+
+<p>
+  <b>Duracion:</b>
+  <%= @convenio.duracion %>
+</p>
+
+<p>
+  <b>Modalidad:</b>
+  <%= @convenio.modalidad %>
+</p>
+
+<p>
+  <b>Idioma:</b>
+  <%= @convenio.idioma %>
+</p>
+
+<p>
+  <b>Beneficios:</b>
+  <%= @convenio.beneficios %>
+</p>
+
+<p>
+  <b>Requisitos:</b>
+  <%= @convenio.requisitos %>
+</p>
+
+<p>
+  <b>Datos adjuntos:</b>
+  <%= @convenio.datos_adjuntos %>
+</p>
+
+<p>
+  <b>Tipoconvenio:</b>
+  <%= @convenio.TipoConvenio %>
+</p>
+
+
+<%= link_to 'Edit', edit_convenio_path(@convenio) %> |
+<%= link_to 'Back', convenios_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  institucion: MyString
+  duracion: MyString
+  periodo: MyString
+  programa: MyString
+  modalidad: MyString
+  idioma: MyString
+  beneficios: MyString
+  requisitos: MyString
+  fch_limite: 2012-11-21
+
+two:
+  titulo: MyString
+  institucion: MyString
+  duracion: MyString
+  periodo: MyString
+  programa: MyString
+  modalidad: MyString
+  idioma: MyString
+  beneficios: MyString
+  requisitos: MyString
+  fch_limite: 2012-11-21

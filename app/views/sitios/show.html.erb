@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @sitio.nombre %>
+</p>
+
+<p>
+  <b>Enlace:</b>
+  <%= @sitio.enlace %>
+</p>
+
+
+<%= link_to 'Edit', edit_sitio_path(@sitio) %> |
+<%= link_to 'Back', sitios_path %>

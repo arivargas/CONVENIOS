@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  pais: MyString
+  institucion: MyString
+  vigencia: MyString
+  carreras: MyString
+  duracion: MyString
+  modalidad: MyString
+  idioma: MyString
+  beneficios: MyString
+  requisitos: MyString
+  datos_adjuntos: MyString
+  TipoConvenio: 
+
+two:
+  titulo: MyString
+  pais: MyString
+  institucion: MyString
+  vigencia: MyString
+  carreras: MyString
+  duracion: MyString
+  modalidad: MyString
+  idioma: MyString
+  beneficios: MyString
+  requisitos: MyString
+  datos_adjuntos: MyString
+  TipoConvenio: 

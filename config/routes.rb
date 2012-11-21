@@ -1,4 +1,12 @@
 Convenios::Application.routes.draw do
+  resources :convenios
+
+  resources :tipo_convenios
+
+  resources :becas
+
+  resources :sitios
+
   resources :experiencia
 
   # The priority is based upon order of creation:
