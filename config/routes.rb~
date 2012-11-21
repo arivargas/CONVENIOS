@@ -1,5 +1,5 @@
 Convenios::Application.routes.draw do
-  
+  get "home/index"
   match 'home' => 'home#index'
 
   resources :convenios

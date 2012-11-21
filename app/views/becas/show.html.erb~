@@ -51,5 +51,5 @@
 </p>
 
 
-<%= link_to 'Modificar los datos', edit_beca_path(@beca) %> |
-<%= link_to 'Ir a atrás', becas_path %>
+<%= link_to 'Edit', edit_beca_path(@beca) %> |
+<%= link_to 'Back', becas_path %>

@@ -2,4 +2,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ir a atrás', becas_path %>
+<%= link_to 'Back', becas_path %>
