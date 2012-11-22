@@ -1,5 +1,19 @@
-<h1>Nueva beca</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Ir a atrás', becas_path %>
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/becas/">Listar todas becas</a></li>					
+					<li><a href="/becas/">Modificar una beca</a></li>
+					<li><a href="/becas/">Eliminar una beca</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Creación de una nueva beca</h2>
+					<%= render 'form' %>
+					<p class="button-style"><%= link_to 'Ir a atrás', becas_path %></p>
+			</div>
+		</div>
+	</div>
+</div>
+					

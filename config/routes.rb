@@ -11,6 +11,10 @@ Convenios::Application.routes.draw do
   resources :sitios
 
   resources :experiencia
+  
+  match "/auth/twitter/callback" => "sessions#create"  
+  match 'auth/failure', to: redirect('/')
+  match "/signout" => "sessions#destroy", :as => :signout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,4 @@
-<%= simple_form_for @beca do |f| %>
+<%= form_for @beca do |f| %>
 
   <% if @beca.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +11,7 @@
       </ul>
     </div>
   <% end %>
+  
 
   <div class="field">
     <%= f.label :título %><br />
@@ -22,11 +23,11 @@
   </div>
   <div class="field">
     <%= f.label :duración %><br />
-    <%= f.text_field :duracion, :required => true, :placeholder => 'Escriba la duración de la beca', :hint => 'Ej: 1 año.' %>
+    <%= f.text_field :duracion, :required => true, :placeholder => 'Escriba la duración de la beca'%>
   </div>
   <div class="field">
     <%= f.label :periodo %><br />
-    <%= f.text_field :periodo, :required => true, :placeholder => 'Escriba a partir de que período institucional empieza la beca', hint => 'Ej: Segundo Semestre 2015.' %>
+    <%= f.text_field :periodo, :required => true, :placeholder => 'Escriba a partir de que período institucional empieza la beca' %>
   </div>
   <div class="field">
     <%= f.label :programa %><br />

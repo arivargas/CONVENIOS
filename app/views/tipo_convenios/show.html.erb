@@ -1,3 +1,16 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/becas/">Listar todos los tipos de convenios</a></li>					
+					<li><a href="/becas/new/">Crear un nuevo tipo de convenio</a></li>
+					<li><a href="/becas/">Modificar un tipo de convenio</a></li>
+					<li><a href="/becas/">Eliminar un tipo de convenio</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Información del tipo de convenio</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,10 +19,12 @@
 </p>
 
 <p>
-  <b>Descripcion:</b>
+  <b>Descripción:</b>
   <%= @tipo_convenio.descripcion %>
 </p>
 
-
-<%= link_to 'Edit', edit_tipo_convenio_path(@tipo_convenio) %> |
-<%= link_to 'Back', tipo_convenios_path %>
+<p class="button-style"><%= link_to 'Ir a atrás', convenios_path %></p>
+			</div>
+		</div>
+	</div>
+</div>

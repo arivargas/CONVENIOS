@@ -1,0 +1,37 @@
+<%= form_for(@experiencium) do |f| %>
+  <% if @experiencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@experiencium.errors.count, "error") %> prohibited this experiencium from being saved:</h2>
+
+      <ul>
+      <% @experiencium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br />
+    <%= f.text_field :comentario %>
+  </div>
+  <div class="field">
+    <%= f.label :periodo %><br />
+    <%= f.text_field :periodo %>
+  </div>
+  <div class="field">
+    <%= f.label :pais %><br />
+    <%= f.text_field :pais %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

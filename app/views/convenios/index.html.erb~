@@ -1,0 +1,37 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/convenios/new/">Crear un nuevo convenio</a></li>
+					<li class="first"><a href="/tipo_convenios/new/">Crear un nuevo tipo de convenio</a></li>					
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Convenios disponibles</h2>
+				
+<table class="gridtable">
+  <tr>
+    <th>Título</th>
+    <th>Pais</th>
+    <th>Institución</th>
+    <th>Vigencia</th>
+    <th>Acciones</th>
+  </tr>
+
+<% @convenios.each do |convenio| %>
+  <tr>
+    <td><%= convenio.titulo %></td>
+    <td><%= convenio.pais %></td>
+    <td><%= convenio.institucion %></td>
+    <td><%= convenio.vigencia %></td>
+    <td><%= link_to 'Mostrar detalles', convenio %> | <%= link_to 'Modificar', edit_convenios_path(convenio) %> | <%= link_to 'Eliminar', convenio, method: :delete, data: { confirm: 'Desea borrar el convenio?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />		
+			</div>
+		</div>
+	</div>
+</div>
+

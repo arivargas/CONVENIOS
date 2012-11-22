@@ -1,6 +1,21 @@
-<h1>Editing sitio</h1>
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/sitios/">Listar todos los sitios</a></li>					
+					<li><a href="/sitios/new/">Crear un nuevo sitio</a></li>
+					<li><a href="/sitios/">Eliminar un sitio</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Modificar la información de un sitio</h2>
+					<%= render 'form' %>
+					<p class="button-style"><%= link_to 'Ir a atrás', sitio_path %></p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @sitio %> |
-<%= link_to 'Back', sitios_path %>
+

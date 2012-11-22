@@ -1,3 +1,16 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/sitios/">Listar todos los sitios</a></li>					
+					<li><a href="/sitios/new/">Crear un nuevo sitio</a></li>
+					<li><a href="/sitios/">Modificar un sitio</a></li>
+					<li><a href="/sitios/">Eliminar un sitio</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Información del sitio</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,6 +23,9 @@
   <%= @sitio.enlace %>
 </p>
 
+<p class="button-style"><%= link_to 'Ir a atrás', sitios_path %></p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= link_to 'Edit', edit_sitio_path(@sitio) %> |
-<%= link_to 'Back', sitios_path %>

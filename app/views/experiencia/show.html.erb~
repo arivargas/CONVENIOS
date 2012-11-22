@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @experiencium.nombre %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @experiencium.titulo %>
+</p>
+
+<p>
+  <b>Comentario:</b>
+  <%= @experiencium.comentario %>
+</p>
+
+<p>
+  <b>Periodo:</b>
+  <%= @experiencium.periodo %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @experiencium.pais %>
+</p>
+
+
+<%= link_to 'Edit', edit_experiencium_path(@experiencium) %> |
+<%= link_to 'Back', experiencia_path %>

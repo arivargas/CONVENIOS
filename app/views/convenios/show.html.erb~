@@ -1,0 +1,80 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/becas/">Listar todos los convenios</a></li>					
+					<li><a href="/becas/new/">Crear un nuevo convenio</a></li>
+					<li><a href="/becas/">Modificar un convenio</a></li>
+					<li><a href="/becas/">Eliminar un convenio</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Información del convenio</h2>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Título:</b>
+  <%= @convenio.titulo %>
+</p>
+
+<p>
+  <b>País:</b>
+  <%= @convenio.pais %>
+</p>
+
+<p>
+  <b>Institución:</b>
+  <%= @convenio.institucion %>
+</p>
+
+<p>
+  <b>Vigencia:</b>
+  <%= @convenio.vigencia %>
+</p>
+
+<p>
+  <b>Carreras:</b>
+  <%= @convenio.carreras %>
+</p>
+
+<p>
+  <b>Duración:</b>
+  <%= @convenio.duracion %>
+</p>
+
+<p>
+  <b>Modalidad:</b>
+  <%= @convenio.modalidad %>
+</p>
+
+<p>
+  <b>Idioma:</b>
+  <%= @convenio.idioma %>
+</p>
+
+<p>
+  <b>Beneficios:</b>
+  <%= @convenio.beneficios %>
+</p>
+
+<p>
+  <b>Requisitos:</b>
+  <%= @convenio.requisitos %>
+</p>
+
+<p>
+  <b>Datos adjuntos:</b>
+  <%= @convenio.datos_adjuntos %>
+</p>
+
+<p>
+  <b>Tipo de convenio:</b>
+  <%= @convenio.TipoConvenio %>
+</p>
+
+<p class="button-style"><%= link_to 'Ir a atrás', becas_path %></p>
+			</div>
+		</div>
+	</div>
+</div>

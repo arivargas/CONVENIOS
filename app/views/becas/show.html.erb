@@ -1,17 +1,31 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/becas/">Listar todas becas</a></li>					
+					<li><a href="/becas/new/">Crear una nueva beca</a></li>
+					<li><a href="/becas/">Modificar una beca</a></li>
+					<li><a href="/becas/">Eliminar una beca</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Información de la beca</h2>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Titulo:</b>
+  <b>Título:</b>
   <%= @beca.titulo %>
 </p>
 
 <p>
-  <b>Institucion:</b>
+  <b>Institución:</b>
   <%= @beca.institucion %>
 </p>
 
 <p>
-  <b>Duracion:</b>
+  <b>Duración:</b>
   <%= @beca.duracion %>
 </p>
 
@@ -46,10 +60,12 @@
 </p>
 
 <p>
-  <b>Fch limite:</b>
+  <b>Fecha límite:</b>
   <%= @beca.fch_limite %>
 </p>
 
-
-<%= link_to 'Modificar los datos', edit_beca_path(@beca) %> |
-<%= link_to 'Ir a atrás', becas_path %>
+					<p class="button-style"><%= link_to 'Ir a atrás', becas_path %></p>
+			</div>
+		</div>
+	</div>
+</div>

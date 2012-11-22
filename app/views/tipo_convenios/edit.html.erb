@@ -1,6 +1,19 @@
-<h1>Editing tipo_convenio</h1>
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/tipo_convenios/">Listar todos los tipos convenios</a></li>					
+					<li><a href="/tipo_convenios/new/">Crear un nuevo tipo de convenio</a></li>
+					<li><a href="/tipo_convenios/">Eliminar un convenio</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Modificar la información de un tipo de convenio</h2>
+					<%= render 'form' %>
+					<p class="button-style"><%= link_to 'Ir a atrás', tipo_convenio_path %></p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @tipo_convenio %> |
-<%= link_to 'Back', tipo_convenios_path %>

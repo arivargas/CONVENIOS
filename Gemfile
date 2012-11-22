@@ -22,4 +22,5 @@ group :production do
   gem 'pg', '0.12.2'
 end
 gem 'simple_form'
-gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-twitter'

@@ -1,6 +1,19 @@
-<h1>Editing convenio</h1>
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/convenios/">Listar todos los convenios</a></li>					
+					<li><a href="/convenios/new/">Crear un nuevo convenio</a></li>
+					<li><a href="/convenios/">Eliminar un convenio</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Modificar la información de un convenio</h2>
+					<%= render 'form' %>
+					<p class="button-style"><%= link_to 'Ir a atrás', convenio_path %></p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @convenio %> |
-<%= link_to 'Back', convenios_path %>

@@ -1,4 +1,4 @@
-<%= form_for(@convenio) do |f| %>
+<%= simple_form_for(@convenio) do |f| %>
   <% if @convenio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@convenio.errors.count, "error") %> prohibited this convenio from being saved:</h2>
@@ -56,8 +56,8 @@
     <%= f.text_field :datos_adjuntos %>
   </div>
   <div class="field">
-    <%= f.label :TipoConvenio %><br />
-    <%= f.text_field :TipoConvenio %>
+    <%= f.label :Tipo_de_convenio %><br />
+    <%= f.collection_select :TipoConvenio_id, TipoConvenio.all, :id, :nombre %>
   </div>
   <div class="actions">
     <%= f.submit %>

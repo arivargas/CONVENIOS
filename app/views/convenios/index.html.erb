@@ -1,22 +1,23 @@
-<h1>Listing convenios</h1>
-
-<table>
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/convenios/new/">Crear un nuevo convenio</a></li>
+					<li class="first"><a href="/tipo_convenios/">Ver todos los tipos de convenios</a></li>
+					<li class="first"><a href="/tipo_convenios/new/">Crear un nuevo tipo de convenio</a></li>					
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Convenios disponibles</h2>
+				
+<table class="gridtable">
   <tr>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Pais</th>
-    <th>Institucion</th>
+    <th>Institución</th>
     <th>Vigencia</th>
-    <th>Carreras</th>
-    <th>Duracion</th>
-    <th>Modalidad</th>
-    <th>Idioma</th>
-    <th>Beneficios</th>
-    <th>Requisitos</th>
-    <th>Datos adjuntos</th>
-    <th>Tipoconvenio</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Acciones</th>
   </tr>
 
 <% @convenios.each do |convenio| %>
@@ -25,21 +26,13 @@
     <td><%= convenio.pais %></td>
     <td><%= convenio.institucion %></td>
     <td><%= convenio.vigencia %></td>
-    <td><%= convenio.carreras %></td>
-    <td><%= convenio.duracion %></td>
-    <td><%= convenio.modalidad %></td>
-    <td><%= convenio.idioma %></td>
-    <td><%= convenio.beneficios %></td>
-    <td><%= convenio.requisitos %></td>
-    <td><%= convenio.datos_adjuntos %></td>
-    <td><%= convenio.TipoConvenio %></td>
-    <td><%= link_to 'Show', convenio %></td>
-    <td><%= link_to 'Edit', edit_convenio_path(convenio) %></td>
-    <td><%= link_to 'Destroy', convenio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar detalles', convenio %> | <%= link_to 'Modificar', edit_convenios_path(convenio) %> | <%= link_to 'Eliminar', convenio, method: :delete, data: { confirm: 'Desea borrar el convenio?' } %></td>
   </tr>
 <% end %>
 </table>
+<br />		
+			</div>
+		</div>
+	</div>
+</div>
 
-<br />
-
-<%= link_to 'New Convenio', new_convenio_path %>

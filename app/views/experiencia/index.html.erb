@@ -1,31 +1,34 @@
-<h1>Listing experiencia</h1>
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/experiencia/new/">Crear una nueva experiencia</a></li>					
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Experiencias vividas por miembros de la comunidad TEC</h2>
 
-<table>
+<table class="gridtable">
   <tr>
     <th>Nombre</th>
-    <th>Titulo</th>
-    <th>Comentario</th>
     <th>Periodo</th>
-    <th>Pais</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>País</th>
+    <th>Acciones</th>
   </tr>
 
 <% @experiencia.each do |experiencium| %>
   <tr>
     <td><%= experiencium.nombre %></td>
-    <td><%= experiencium.titulo %></td>
-    <td><%= experiencium.comentario %></td>
     <td><%= experiencium.periodo %></td>
     <td><%= experiencium.pais %></td>
-    <td><%= link_to 'Show', experiencium %></td>
-    <td><%= link_to 'Edit', edit_experiencium_path(experiencium) %></td>
-    <td><%= link_to 'Destroy', experiencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar detalles', experiencium %> | <%= link_to 'Modificar experiencia', edit_experiencium_path(experiencium)%> | <%= link_to 'Eliminar experiencia', experiencium, method: :delete, data: { confirm: 'Desea eliminarla?' } %></td>
   </tr>
 <% end %>
 </table>
+<br />		
+			</div>
+		</div>
+	</div>
+</div>
 
-<br />
-
-<%= link_to 'New Experiencium', new_experiencium_path %>

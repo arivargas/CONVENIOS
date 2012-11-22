@@ -1,12 +1,25 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/experiencia/">Listar todas las experiencias</a></li>					
+					<li><a href="/experiencia/new/">Crear una nueva experiencia</a></li>
+					<li><a href="/experiencia/">Modificar una experiencia</a></li>
+					<li><a href="/experiencia/">Eliminar una experiencia</a></li>
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Información de la experiencia</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Nombre:</b>
+  <b>Nombre del participante:</b>
   <%= @experiencium.nombre %>
 </p>
 
 <p>
-  <b>Titulo:</b>
+  <b>Título:</b>
   <%= @experiencium.titulo %>
 </p>
 
@@ -21,10 +34,12 @@
 </p>
 
 <p>
-  <b>Pais:</b>
+  <b>País visitado:</b>
   <%= @experiencium.pais %>
 </p>
 
-
-<%= link_to 'Edit', edit_experiencium_path(@experiencium) %> |
-<%= link_to 'Back', experiencia_path %>
+<p class="button-style"><%= link_to 'Ir a atrás', experiencia_path %></p>
+			</div>
+		</div>
+	</div>
+</div>

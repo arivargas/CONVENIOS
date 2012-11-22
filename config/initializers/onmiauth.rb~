@@ -1,0 +1,9 @@
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :twitter, '125245733-orUyM1CtXUXuRuZjoaK9ms6ttEpMWmyJiOeJ6Wbu', 'w1XjiwzA85uhfrioq13sdnAA9t6J9MkYaLTab71bQ'
+  
+  OmniAuth.config.on_failure = Proc.new { |env|
+  OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+}
+
+end
+
