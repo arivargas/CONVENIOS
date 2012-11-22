@@ -43,11 +43,11 @@
   </div>
   <div class="field">
     <%= f.label :beneficios %><br />
-    <%= f.text_field :beneficios %>
+    <%= f.text_area :beneficios %>
   </div>
   <div class="field">
     <%= f.label :requisitos %><br />
-    <%= f.text_field :requisitos %>
+    <%= f.text_area :requisitos %>
   </div>
   <div class="field">
     <%= f.label :fecha_límite %><br />

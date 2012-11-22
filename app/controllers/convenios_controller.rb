@@ -41,7 +41,7 @@ class ConveniosController < ApplicationController
   # POST /convenios.json
   def create
     @convenio = Convenio.new(params[:convenio])
-    @convenio.TipoConvenio = Convenio.new(params[:convenio]).nombre
+    @convenio.TipoConvenio = Convenio.new(params[:convenio][TipoConvenio_id][:nombre])
 
     respond_to do |format|
       if @convenio.save
