@@ -3,6 +3,7 @@ class ConveniosController < ApplicationController
   # GET /convenios.json
   def index
     @convenios = Convenio.all
+    @tipoconvenios = TipoConvenio.all.count
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,8 +42,7 @@ class ConveniosController < ApplicationController
   # POST /convenios.json
   def create
     @convenio = Convenio.new(params[:convenio])
-    @convenio.TipoConvenio = Convenio.new(params[:convenio][TipoConvenio_id][:nombre])
-
+    
     respond_to do |format|
       if @convenio.save
         format.html { redirect_to @convenio, notice: 'Convenio was successfully created.' }

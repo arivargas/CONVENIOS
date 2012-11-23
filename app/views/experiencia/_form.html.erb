@@ -13,23 +13,23 @@
 
   <div class="field">
     <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, :required => true, :placeholder => 'Escriba su nombre' %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+    <%= f.text_field :titulo, :required => true, :placeholder => 'Escriba el título de su experiencia' %>
   </div>
   <div class="field">
     <%= f.label :comentario %><br />
-    <%= f.text_area :comentario %>
+    <%= f.text_area :comentario, :required => true, :placeholder => 'Escriba su comentario' %>
   </div>
   <div class="field">
     <%= f.label :periodo %><br />
-    <%= f.text_field :periodo %>
+    <%= f.text_field :periodo, :required => true, :placeholder => 'Escriba el período en el que estuvo fuera del país' %>
   </div>
   <div class="field">
     <%= f.label :pais %><br />
-    <%= f.text_field :pais %>
+    <%= f.text_field :pais, :required => true, :placeholder => 'Escriba el país que visitó' %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,0 +1,34 @@
+<div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/universidads/new/">Ingresar una nueva universidad</a></li>					
+				</ul>
+			</div>
+			<div id="fbox2">
+				<h2>Universidades registradas</h2>
+				
+<table class="gridtable">
+  <tr>
+    <th>Nombre</th>
+    <th>Latitud</th>
+    <th>Longitud</th>
+    <th>Acciones</th>
+  </tr>
+
+<% @universidads.each do |universidad| %>
+  <tr>
+    <td><%= universidad.nombre %></td>
+    <td><%= universidad.latitud %></td>
+    <td><%= universidad.longitud %></td>
+    <td><%= link_to 'Mostrar detalles', universidad %> | <%= link_to 'Modificar', edit_universidad_path(universidad) %> | <%= link_to 'Eliminar', universidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />		
+			</div>
+		</div>
+	</div>
+</div>
+

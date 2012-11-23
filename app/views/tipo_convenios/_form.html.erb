@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, :required => true, :placeholder => 'Escriba el nombre del tipo de convenio' %>
   </div>
   <div class="field">
     <%= f.label :descripción %><br />
-    <%= f.text_field :descripcion %>
+    <%= f.text_field :descripcion, :required => true, :placeholder => 'Escriba la descripción del tipo de convenio' %>
   </div>
   <div class="actions">
     <%= f.submit %>

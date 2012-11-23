@@ -1,0 +1,31 @@
+<%= form_for(@universidad) do |f| %>
+  <% if @universidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@universidad.errors.count, "error") %> prohibited this universidad from being saved:</h2>
+
+      <ul>
+      <% @universidad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre, :required => true, :placeholder => 'Escriba el nombre de la universidad' %>
+  </div>
+  <p><h3>Para identificar la ubicación de la universidad a nivel mundial, por favor busque el lugar y posicionese sobre el.</h3></p>
+  <p>La información respecto a la latitud y la longitud automáticamente cambiaran, por tanto no debe llenar esos campos, a excepción que sea de su conocimientos los datos.</p>
+  <div class="field">
+    <%= f.label :latitud %><br />
+    <%= f.text_field :latitud, :required => true%>
+  </div>
+  <div class="field">
+    <%= f.label :longitud %><br />
+    <%= f.text_field :longitud, :required => true%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

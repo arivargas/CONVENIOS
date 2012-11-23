@@ -1,5 +1,7 @@
 Convenios::Application.routes.draw do
   
+  resources :universidads
+
   match 'home' => 'home#index'
 
   resources :convenios

@@ -120,7 +120,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (= 3.2.2)
   jquery-rails (= 2.0.2)
-  omniauth
   omniauth-twitter
   pg (= 0.12.2)
   rails (= 3.2.8)

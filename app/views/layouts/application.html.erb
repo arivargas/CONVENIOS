@@ -22,8 +22,8 @@
 				<br>
 				<div>
   					<% if current_user %>
-    					Welcome <strong><%= current_user.name %></strong>!
-    					<%= link_to " | Sign out", signout_path, id: "sign_out" %>
+    					Welcome <strong><%= current_user.name %></strong>! | 
+    					<%= link_to "Sign out", signout_path, id: "sign_out" %>
   					<% else %>
     					<%= link_to "Sign in with Twitter", "/auth/twitter/" %>
   					<% end %>
@@ -36,7 +36,7 @@
 					<li><a href="/convenios" accesskey="3" title="">Convenios</a></li>
 					<li><a href="/sitios" accesskey="4" title="">Sitios de interes</a></li>
 					<li><a href="/experiencia" accesskey="5" title="">Experiencias</a></li>
-					<li><a href="/experiencia" accesskey="5" title="">Universidades</a></li>
+					<li><a href="/universidads" accesskey="5" title="">Universidades</a></li>
 				</ul>
 			</div>
 		</div>

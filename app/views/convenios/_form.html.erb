@@ -1,4 +1,9 @@
-<%= simple_form_for(@convenio) do |f| %>
+<% if @tipoconvenios %>
+	<h3>Para agregar un convenio primero deben existir tipos de convenios creados.</h3>
+	<h3>Diríjase a este enlace para crear un <a href="/tipo_convenios/new/">tipo de convenio</a>.</h3>
+<% else %>
+
+<%= form_for(@convenio) do |f| %>
   <% if @convenio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@convenio.errors.count, "error") %> prohibited this convenio from being saved:</h2>
@@ -12,44 +17,44 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+    <%= f.label :título %><br />
+    <%= f.text_field :titulo, :required => true, :placeholder => 'Escriba el título del convenio' %>
   </div>
   <div class="field">
-    <%= f.label :pais %><br />
-    <%= f.text_field :pais %>
+    <%= f.label :país %><br />
+    <%= f.text_field :pais, :required => true, :placeholder => 'Escriba el nombre del país de donde proviene el convenio' %>
   </div>
   <div class="field">
-    <%= f.label :institucion %><br />
-    <%= f.text_field :institucion %>
+    <%= f.label :institución %><br />
+    <%= f.text_field :institucion, :required => true, :placeholder => 'Escriba el nombre de la institución que brinda el convenio ' %>
   </div>
   <div class="field">
     <%= f.label :vigencia %><br />
-    <%= f.text_field :vigencia %>
+    <%= f.text_field :vigencia, :required => true, :placeholder => 'Escriba hasta cuando está vigente el convenio' %>
   </div>
   <div class="field">
     <%= f.label :carreras %><br />
-    <%= f.text_field :carreras %>
+    <%= f.text_field :carreras, :required => true, :placeholder => 'Escriba el nombre de la(s) carrera(s) relacionadas al convenio' %>
   </div>
   <div class="field">
-    <%= f.label :duracion %><br />
-    <%= f.text_field :duracion %>
+    <%= f.label :duración %><br />
+    <%= f.text_field :duracion, :required => true, :placeholder => 'Escriba la duración del convenio' %>
   </div>
   <div class="field">
     <%= f.label :modalidad %><br />
-    <%= f.text_field :modalidad %>
+    <%= f.text_field :modalidad, :required => true, :placeholder => 'Escriba la modalidad del convenio' %>
   </div>
   <div class="field">
     <%= f.label :idioma %><br />
-    <%= f.text_field :idioma %>
+    <%= f.text_field :idioma, :required => true, :placeholder => 'Escriba el requisito mínimo en idiomas que solicita la beca' %>
   </div>
   <div class="field">
     <%= f.label :beneficios %><br />
-    <%= f.text_field :beneficios %>
+    <%= f.text_area :beneficios, :required => true, :placeholder => 'Escriba los beneficios que brinda la beca' %>
   </div>
   <div class="field">
     <%= f.label :requisitos %><br />
-    <%= f.text_field :requisitos %>
+    <%= f.text_area :requisitos, :required => true, :placeholder => 'Escriba los requisitos necesarios para optar por la beca' %>
   </div>
   <div class="field">
     <%= f.label :datos_adjuntos %><br />
@@ -62,4 +67,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
 <% end %>
