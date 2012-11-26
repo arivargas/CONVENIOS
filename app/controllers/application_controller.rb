@@ -9,14 +9,14 @@ class ApplicationController < ActionController::Base
   
   #Solicitar login del usuario para ciertas acciones
   
-  before_filter :authenticate
+	#before_filter :authenticate
 
-  def authenticate
-    redirect_to :login unless User.find_by_provider_and_uid(auth["provider"], auth["uid"])
-  end
+  #def authenticate
+   # redirect_to :login unless User.find_by_provider_and_uid(auth["provider"], auth["uid"])
+  #end
  
   # Pregunta si hay un usuario loggeado.
-  def logged_in?
-    !!current_user
-  end 
+  #def logged_in?
+    #!!current_user
+  #end 
 end
