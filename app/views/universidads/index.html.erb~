@@ -1,16 +1,20 @@
+<!-- se utiliza el yield colocado en applicacion.html.erb para introducir el siguiente bloque. -->
 <%= content_for(:head) do %>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu6BlnUHebSvPr2rb-ya1b0yzXAyH5sIU&sensor=false">
     </script>
-
-        <!--De JSON a js.Window es para poder compartir la variable para todos los javascripts que referencia esta página-->
-    <%= javascript_tag do %>
-        window.universidadJson = <%=raw @universidad.to_json %>;
-    <% end %>
     
-    <%= javascript_include_tag "umap" %>
-
+    <!--Se serializan las universidades a un JSON para poder pasarlo al 
+        javascript. Éste es el tag para poder crear un script de javascript.
+        El raw es para escapar caracteres.
+        el Window es para poder compartir la variable para todos los javascripts que referencia esta página-->
+    <%= javascript_tag do %>
+        window.universidadJson = <%=raw @universidads.to_json %>;
+    <% end %>
+    <!--se incluye el archivo assets/javascripts/umaptodos.js-->    
+    <%= javascript_include_tag "umaptodos" %>
 <% end %>
 
  <div id="wrapper">
@@ -22,7 +26,7 @@
 					<li class="first"><a href="/universidads/new/">Ingresar una nueva universidad</a></li>					
 				</ul>
 			</div>
-			<div id="fbox21">
+			<div id="fbox2">
 				<h2>Universidades registradas</h2>
 				
   <table class="gridtable">
@@ -44,10 +48,6 @@
   </table>
   <br />		
 			</div>
-			<div id="fbox3">
-				<div id="map_canvas"></div>
-			</div>
-			
 		</div>
 	</div>
 </div>

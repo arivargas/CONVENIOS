@@ -255,7 +255,7 @@ hr {
 	
 	padding: 50px 0px 15px 0px;
 	height: 60%;
-	width: 27%;
+	width: 26%;
 	margin: 20px 100px 0px 0px;
 	position: absolute;
 	background: #FFFFFF;

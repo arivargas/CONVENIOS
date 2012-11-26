@@ -32,7 +32,11 @@
 					<strong>Si no desea usar el servicio de Twitter</strong><br>
   					<%= link_to "Registrarse", "/sessions/new/" %> | 
   					<%= link_to "Log in", "/sessions/" %>
-				<div>
+				<div id= "alert_messages">
+					<!--para mostrar mensajes de alerta-->				   
+				   <% flash.each do |name, msg| %>
+				    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  					<% end %>
 				</div>
 			</div>
 			<div id="menu">

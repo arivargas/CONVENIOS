@@ -30,3 +30,4 @@ gem 'omniauth-twitter'
 #this gem is for authenticated users with sign in
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'omniauth-identity'
+gem 'omniauth'
