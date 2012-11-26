@@ -1,5 +1,23 @@
-<h1>New universidad</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', universidads_path %>
+  <div id="footer-wrapper">
+		<div id="footer-content">
+			<div id="fbox1">
+				<h2>Acciones</h2>
+				<ul class="style2">
+					<li class="first"><a href="/universidads/">Mostrar mapa con todas las universidades</a></li>					
+					<li><a href="/universidads/">Modificar datos de una universidad</a></li>
+					<li><a href="/universidads/">Eliminar una universidad</a></li>
+				</ul>
+			</div>
+			<div id="fbox21">
+				<h2>Ingresar una nueva universidad</h2>
+					<%= render 'form' %>
+					<p class="button-style"><%= link_to 'Ir a atrás', universidads_path %></p>
+			</div>
+			<div id="fbox3">
+				<div id="map_canvas"></div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div id="map_canvas"></div>

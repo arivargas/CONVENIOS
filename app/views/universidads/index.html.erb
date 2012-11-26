@@ -1,4 +1,20 @@
-<div id="footer-wrapper">
+<%= content_for(:head) do %>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu6BlnUHebSvPr2rb-ya1b0yzXAyH5sIU&sensor=false">
+    </script>
+
+        <!--De JSON a js.Window es para poder compartir la variable para todos los javascripts que referencia esta página-->
+    <%= javascript_tag do %>
+        window.universidadJson = <%=raw @universidad.to_json %>;
+    <% end %>
+    
+    <%= javascript_include_tag "umap" %>
+
+<% end %>
+
+ <div id="wrapper">
+  <div id="footer-wrapper">
 		<div id="footer-content">
 			<div id="fbox1">
 				<h2>Acciones</h2>
@@ -9,7 +25,7 @@
 			<div id="fbox2">
 				<h2>Universidades registradas</h2>
 				
-<table class="gridtable">
+  <table class="gridtable">
   <tr>
     <th>Nombre</th>
     <th>Latitud</th>
@@ -17,16 +33,16 @@
     <th>Acciones</th>
   </tr>
 
-<% @universidads.each do |universidad| %>
+  <% @universidads.each do |universidad| %>
   <tr>
     <td><%= universidad.nombre %></td>
     <td><%= universidad.latitud %></td>
     <td><%= universidad.longitud %></td>
     <td><%= link_to 'Mostrar detalles', universidad %> | <%= link_to 'Modificar', edit_universidad_path(universidad) %> | <%= link_to 'Eliminar', universidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-<br />		
+  </tr>  
+  <% end %>
+  </table>
+  <br />		
 			</div>
 		</div>
 	</div>

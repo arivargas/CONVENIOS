@@ -1,3 +1,17 @@
+<%= content_for(:head) do %>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu6BlnUHebSvPr2rb-ya1b0yzXAyH5sIU&sensor=false">
+    </script>
+
+        <!--De JSON a js.Window es para poder compartir la variable para todos los javascripts que referencia esta página-->
+    <%= javascript_tag do %>
+        window.universidadJson = <%=raw @universidad.to_json %>;
+    <% end %>
+    
+    <%= javascript_include_tag "umap" %>
+
+<% end %>
 <%= form_for(@universidad) do |f| %>
   <% if @universidad.errors.any? %>
     <div id="error_explanation">
@@ -15,12 +29,14 @@
     <%= f.label :nombre %><br />
     <%= f.text_field :nombre, :required => true, :placeholder => 'Escriba el nombre de la universidad' %>
   </div>
-  <p>Para identificar la ubicación de la universidad a nivel mundial, por favor busque el lugar y posicionese sobre el.</p>
+  <p><h3>Para identificar la ubicación de la universidad a nivel mundial, por favor busque el lugar y posicionese sobre el.</h3></p>
   <p>La información respecto a la latitud y la longitud automáticamente cambiaran, por tanto no debe llenar esos campos, a excepción que sea de su conocimientos los datos.</p>
+    
   <div class="field">
     <%= f.label :latitud %><br />
     <%= f.text_field :latitud, :required => true%>
   </div>
+  
   <div class="field">
     <%= f.label :longitud %><br />
     <%= f.text_field :longitud, :required => true%>

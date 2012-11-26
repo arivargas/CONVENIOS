@@ -29,7 +29,10 @@
 
 					<p class="button-style"><%= link_to 'Ir a atrás', universidads_path %></p>
 			</div>
-						
+			<div id="fbox3">
+				<div id="map_canvas"></div>
+			</div>
+			
 		</div>
 	</div>
 </div>

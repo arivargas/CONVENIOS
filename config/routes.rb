@@ -1,5 +1,8 @@
 Convenios::Application.routes.draw do
   
+  resources :identities  
+  
+  resources :sessions  
   resources :universidads
 
   match 'home' => 'home#index'
@@ -15,8 +18,10 @@ Convenios::Application.routes.draw do
   resources :experiencia
   
   match "/auth/twitter/callback" => "sessions#create"  
-  match 'auth/failure', to: redirect('/')
+  match "/auth/failure", to: redirect('/')
   match "/signout" => "sessions#destroy", :as => :signout
+  match "/auth/failure", to: "sessions#failure"
+  match "/logout", to: "sessions#destroy", :as => "logout"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -67,7 +72,7 @@ Convenios::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
+   root to: "sessions#index"
 
   # See how all your routes lay out with "rake routes"
 

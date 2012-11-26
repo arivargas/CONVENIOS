@@ -21,6 +21,12 @@ gem 'jquery-rails', '2.0.2'
 group :production do
   gem 'pg', '0.12.2'
 end
+#this gem create a different kind of form
 gem 'simple_form'
-gem 'omniauth'
+
+#this gem is for twitter
 gem 'omniauth-twitter'
+
+#this gem is for authenticated users with sign in
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'omniauth-identity

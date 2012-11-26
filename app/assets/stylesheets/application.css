@@ -249,6 +249,17 @@ hr {
 	font-size: 2em;
 }
 
+/* canvas */
+
+#map_canvas {
+	
+	padding: 50px 0px 15px 0px;
+	height: 60%;
+	width: 26%;
+	margin: 20px 100px 0px 0px;
+	position: absolute;
+	background: #FFFFFF;
+}
 /* Footer */
 
 #footer {
@@ -304,10 +315,16 @@ hr {
 	width: 800px;
 }
 
+#footer-content #fbox21 {
+	float: left;
+	width: 400px;
+}
+
 #footer-content #fbox3 {
 	float: right;
-	width: 280px;
+	width: 350px;
 }
+
 
 /* Banner Style */
 

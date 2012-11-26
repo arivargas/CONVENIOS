@@ -11,9 +11,10 @@
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-
+<!--para poder agregar contenido desde otra vista a esta sección. Para el mapa.--> 
+<%= yield(:head) %>
 </head>
-<body> 
+<body onload="initialize()"> 
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -27,6 +28,11 @@
   					<% else %>
     					<%= link_to "Sign in with Twitter", "/auth/twitter/" %>
   					<% end %>
+				</div>
+					<strong>Si no desea usar el servicio de Twitter</strong><br>
+  					<%= link_to "Registrarse", "/sessions/new/" %> | 
+  					<%= link_to "Log in", "/sessions/" %>
+				<div>
 				</div>
 			</div>
 			<div id="menu">
@@ -43,6 +49,5 @@
 	</div>
 
 <%= yield %>
-
 </body>
 </html>

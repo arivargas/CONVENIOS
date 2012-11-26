@@ -249,6 +249,17 @@ hr {
 	font-size: 2em;
 }
 
+/* canvas */
+
+#map_canvas {
+	
+	padding: 50px 0px 15px 0px;
+	height: 60%;
+	width: 27%;
+	margin: 20px 100px 0px 0px;
+	position: absolute;
+	background: #FFFFFF;
+}
 /* Footer */
 
 #footer {
@@ -304,10 +315,16 @@ hr {
 	width: 800px;
 }
 
+#footer-content #fbox21 {
+	float: left;
+	width: 400px;
+}
+
 #footer-content #fbox3 {
 	float: right;
-	width: 280px;
+	width: 350px;
 }
+
 
 /* Banner Style */
 
@@ -489,4 +506,27 @@ ul.style3 .first {
 	text-decoration: none;
 	text-shadow: 1px 1px 0px #FCE3BB;
 	color: #36332E !important;
+}
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
 }
