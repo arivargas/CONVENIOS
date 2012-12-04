@@ -31,3 +31,6 @@ gem 'omniauth-twitter'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'omniauth-identity'
 gem 'omniauth'
+
+#gema para buscar cosas
+gem 'meta_search'

@@ -1,0 +1,15 @@
+<%= form_for @search, :url => search_path(@search), :method => :get do |f| %>
+  
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre_contains, :required => true, :placeholder => 'Escriba el nombre de la universidad que desea buscar' %>
+  </div>
+      
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion_contains, :required => true%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

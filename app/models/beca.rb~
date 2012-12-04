@@ -2,6 +2,6 @@ class Beca < ActiveRecord::Base
   attr_accessible :beneficios, :duracion, :fch_limite, :idioma, :institucion, :modalidad, :periodo, :programa, :requisitos, :titulo
   
   validates_presence_of :beneficios, :duracion, :fch_limite, :idioma, :institucion, :modalidad, :periodo, :programa, :requisitos, :titulo
-  validates :titulo, :uniqueness => true, :message => { "El título ya ha sido usado" }
+  validates :titulo, :uniqueness => true#, :message => { "El título ya ha sido usado" }
   #validates_date :fch_limite, :on_or_before => lambda { Date.current }
 end

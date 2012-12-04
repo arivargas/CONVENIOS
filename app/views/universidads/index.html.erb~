@@ -24,6 +24,7 @@
 				<h2>Acciones</h2>
 				<ul class="style2">
 					<li class="first"><a href="/universidads/new/">Ingresar una nueva universidad</a></li>					
+					<li class="first"><a href="/universidads/search/">Buscar universidades</a></li>
 				</ul>
 			</div>
 			<div id="fbox2">
@@ -51,4 +52,4 @@
 		</div>
 	</div>
 </div>
-
+<div id="map_canvastodos"></div>

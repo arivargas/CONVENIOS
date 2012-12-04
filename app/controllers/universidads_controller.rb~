@@ -80,9 +80,4 @@ class UniversidadsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  def search
-  		@search = Universidad.search(params[:search])
-  		@searched_universidades = @search.all  		
-  end
 end

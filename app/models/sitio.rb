@@ -1,5 +1,9 @@
 class Sitio < ActiveRecord::Base
-  attr_accessible :enlace, :nombre
+  
+  has_many :Beca
+  has_many :Convenio
+  
+  attr_accessible :enlace, :nombre, :latitud, :longitud, :direccion
   
   validates :nombre, :presence => true, :uniqueness => true
   validates :enlace, :presence => true, :uniqueness => true

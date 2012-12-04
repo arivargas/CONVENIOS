@@ -43,17 +43,17 @@
   </div>
   <div class="field">
     <%= f.label :beneficios %><br />
-    <%= f.text_area :beneficios, :required => true, :placeholder => 'Escriba los beneficios que brinda la beca' %>
+    <%= f.text_area :beneficios, :required => true, :placeholder => 'Escriba los beneficios que brinda la beca', :size => "62x10"%>
   </div>
   <div class="field">
     <%= f.label :requisitos %><br />
-    <%= f.text_area :requisitos, :required => true, :placeholder => 'Escriba los requisitos necesarios para optar por la beca' %>
+    <%= f.text_area :requisitos, :required => true, :placeholder => 'Escriba los requisitos necesarios para optar por la beca', :size => "62x10"%>
   </div>
   <div class="field">
     <%= f.label :fecha_límite %><br />
     <%= f.date_select :fch_limite %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "button" %>
   </div>
 <% end %>

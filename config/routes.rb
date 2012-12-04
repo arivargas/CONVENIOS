@@ -1,22 +1,17 @@
 Convenios::Application.routes.draw do
   
   resources :identities  
-  
   resources :sessions  
   resources :universidads
-
-  match 'home' => 'home#index'
-
   resources :convenios
-
   resources :tipo_convenios
-
   resources :becas
-
   resources :sitios
-
   resources :experiencia
   
+  get "search" => "universidads#search", :as => "search"
+  
+  match 'home' => 'home#index'
   match "/auth/twitter/callback" => "sessions#create"  
   match "/auth/failure", to: redirect('/')
   match "/signout" => "sessions#destroy", :as => :signout

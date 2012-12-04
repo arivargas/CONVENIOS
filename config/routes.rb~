@@ -5,6 +5,8 @@ Convenios::Application.routes.draw do
   resources :sessions  
   resources :universidads
 
+  match 'home' => 'home#index'
+
   resources :convenios
 
   resources :tipo_convenios

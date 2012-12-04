@@ -1,0 +1,17 @@
+<%= form_for @search, :url => search_path(@search), :method => :get do |f| %>
+  
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre_contains, :required => true, :placeholder => 'Escriba el nombre de la universidad' %>
+  </div>
+  <p><h3>Para identificar la ubicación de la universidad a nivel mundial, por favor busque el lugar y posicionese sobre el.</h3></p>
+  <p>La información respecto a la latitud y la longitud automáticamente cambiaran, por tanto no debe llenar esos campos, a excepción que sea de su conocimientos los datos.</p>
+      
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion_contains, :required => true%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

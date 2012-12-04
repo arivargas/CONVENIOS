@@ -31,29 +31,29 @@
   </div>
   <div class="field">
     <%= f.label :programa %><br />
-    <%= f.text_field :programa %>
+    <%= f.text_field :programa, :placeholder => 'Escriba el nombre del programa correspondiente a la beca' %>
   </div>
   <div class="field">
     <%= f.label :modalidad %><br />
-    <%= f.text_field :modalidad %>
+    <%= f.text_field :modalidad, :required => true, :placeholder => 'Escriba la modalidad  para la cual se brinda la beca' %>
   </div>
   <div class="field">
     <%= f.label :idioma %><br />
-    <%= f.text_field :idioma %>
+    <%= f.text_field :idioma, :required => true, :placeholder => 'Escriba el requisito mínimo en idiomas que solicita la beca' %>
   </div>
   <div class="field">
     <%= f.label :beneficios %><br />
-    <%= f.text_area :beneficios %>
+    <%= f.text_area :beneficios, :required => true, :placeholder => 'Escriba los beneficios que brinda la beca', :size => "62x10"%>
   </div>
   <div class="field">
     <%= f.label :requisitos %><br />
-    <%= f.text_area :requisitos %>
+    <%= f.text_area :requisitos, :required => true, :placeholder => 'Escriba los requisitos necesarios para optar por la beca', :size => "62x10"%>
   </div>
   <div class="field">
     <%= f.label :fecha_límite %><br />
     <%= f.date_select :fch_limite %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit, :class => "button" %>
   </div>
 <% end %>

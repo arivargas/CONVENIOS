@@ -70,6 +70,3 @@ div {
 input {
 	width: 450px;
 }
-button {
-	width: 50px;
-}

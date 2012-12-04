@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123024140) do
+ActiveRecord::Schema.define(:version => 20121204203113) do
 
   create_table "becas", :force => true do |t|
     t.string   "titulo"
@@ -70,6 +70,9 @@ ActiveRecord::Schema.define(:version => 20121123024140) do
     t.string   "enlace"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "latitud"
+    t.string   "longitud"
+    t.string   "direccion"
   end
 
   create_table "tipo_convenios", :force => true do |t|
@@ -85,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20121123024140) do
     t.float    "longitud"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "direccion"
   end
 
   create_table "users", :force => true do |t|
